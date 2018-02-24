@@ -1,0 +1,6 @@
+h1.Title {
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: #b642f4;
+  font-size: 3.6rem;
+  text-align: center;
+}
