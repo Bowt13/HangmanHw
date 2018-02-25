@@ -1,4 +1,5 @@
-const initialState = [
+const initialState = ["party"]
+/*[
   "ability","able","aboard","about","above","accept","accident","according",
   "account","accurate","acres","across","act","action","active","activity",
   "actual","actually","add","addition","additional","adjective","adult","adventure",
@@ -243,7 +244,7 @@ const initialState = [
   "wrapped","write","writer","writing","written","wrong","wrote","yard",
   "year","yellow","yes","yesterday","yet","you","young","younger",
   "your","yourself","youth","zero","zebra","zipper","zoo","zulu"
-]
+]*/
 
 export default (state = initialState, { type, payload } = {}) => {
     return state

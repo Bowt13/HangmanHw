@@ -6,20 +6,24 @@ import { guessAction } from '../Actions/hangman'
 
 export class Guesses extends PureComponent {
   static propTypes = {
-    guesses: PropTypes.arrayOf(
-      PropTypes.string).isRequired
+    guesses: PropTypes.arrayOf(PropTypes.string).isRequired,
+    word: PropTypes.arrayOf(PropTypes.string).isRequired,
   }
 
   dispatchAction = (event) => {
-    if (event.target.value == ""){
-    }
-    else {
-      if (event.target.value.length == 1){
-        this.props.guessAction(event.target.value)
-        event.target.value=null
+        if (event.target.value == ""){
+        }
+        else {
+          if (event.target.value.length == 1){
+            this.props.guessAction(event.target.value)
+            event.target.value=null
+          }
+        }
       }
-    }
-  }
+
+
+
+
 
   render() {
     return (
@@ -30,6 +34,13 @@ export class Guesses extends PureComponent {
       </form>
       </div>
     )
+  }
+}
+const mapStateToProps = (reduxState) => {
+  return {
+    guesses: reduxState.guesses,
+    answers: reduxState.answers,
+    word: reduxState.answers
   }
 }
 export default connect(null, { guessAction })(Guesses)

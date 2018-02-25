@@ -4,14 +4,18 @@ import { connect } from 'react-redux'
 
 export default class Hangman extends PureComponent {
   static propTypes = {
-    Hangman: PropTypes.string.isRequired
+    hangman: PropTypes.arrayOf(PropTypes.string).isRequired,
+//    wrongguesses: proptypes.string.isRequired
   }
+
+//  hangmanState = (hangman, wrongguesses)
+    return
 
 
   render() {
     return (
       <div id="hangman_display">
-          url("../images/hangman_0.jpeg")
+
       </div>
     )
   }
