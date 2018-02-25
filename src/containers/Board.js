@@ -2,10 +2,11 @@ import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import Awnser from '../components/Answer'
 import Title from '../components/Title'
-import Input from '../components/Form'
+import Guesses from '../components/Guesses'
 import { connect } from 'react-redux'
+import Hangman from '../components/Hangman'
 
-export default class Board extends PureComponent {
+export class Board extends PureComponent {
   static propTypes = {
     guesses: PropTypes.arrayOf(
       PropTypes.string).isRequired,
@@ -17,8 +18,10 @@ export default class Board extends PureComponent {
       <div className="Board">
         <Title content="·•>HangmaN<•·" />
         <Awnser/>
-        <Input/>
+        <Guesses/>
       </div>
     )
   }
 }
+
+export default Board
