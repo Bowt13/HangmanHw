@@ -11,15 +11,21 @@ export class Guesses extends PureComponent {
   }
 
   dispatchAction = (event) => {
-    this.props.guessAction(event.target.value)
-    event.target.value=null
+    if (event.target.value == ""){
+    }
+    else {
+      if (event.target.value.length == 1){
+        this.props.guessAction(event.target.value)
+        event.target.value=null
+      }
+    }
   }
 
   render() {
     return (
       <div className="">
       <form onSubmit={(event) => {event.preventDefault()}}>
-        <input className="StyleForm" type="text" id="new-guess" placeholder="Guess a letter" onChange={this.dispatchAction.bind(this)}>
+        <input className="StyleForm" type="text" id="new-guess" placeholder="Guess a letter" onKeyUp={this.dispatchAction.bind(this)}>
       </input>
       </form>
       </div>

@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import store from './store'
+import { connect } from 'react-redux'
 import './App.css';
 import Board from './containers/Board'
 

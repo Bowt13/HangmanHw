@@ -18,10 +18,15 @@ export class Board extends PureComponent {
       <div className="Board">
         <Title content="·•>HangmaN<•·" />
         <Awnser/>
+        <p>{this.props.guesses.join(",")}</p>
         <Guesses/>
       </div>
     )
   }
 }
-
-export default Board
+const mapStateToProps = (reduxState) => {
+  return {
+    guesses: reduxState.guesses
+  }
+}
+export default connect(mapStateToProps)(Board)
